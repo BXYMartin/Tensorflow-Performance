@@ -8,6 +8,7 @@ import tensorflow as tf
 import tensorflow.contrib.slim as slim
 from tensorflow.python.ops import variables
 from time import time
+
 models = [
         "vgg.vgg_16",
         "vgg.vgg_19",
@@ -23,13 +24,11 @@ models = [
         "inception.inception_v1",
         "inception.inception_v2",
         "inception.inception_v3",
-
         ]
 
 out = ""
 ROUND = 3
-session_config = tf.ConfigProto(
-        )
+session_config = tf.ConfigProto()
 
 for name in models:
     run_name = eval(name)
